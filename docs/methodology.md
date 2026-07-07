@@ -27,13 +27,6 @@
 > - `ESTU_VALORMATRICULAUNIVERSIDAD`: faltaba `'No pagó matrícula'`
 >   (equivalente a `'Sin costo'`), ~9% de los registros.
 >
-> Tras corregir `preprocessing.py`, el NaN residual de educación del padre
-> baja a ~4.8% (que corresponde genuinamente a respuestas "No sabe" /
-> "No Aplica", no a un error de mapeo) y el resto queda por debajo de 1.5%.
-> **Si ya tenías resultados/figuras generados antes de esta corrección,
-> recomendamos volver a correr Fase 1 y Fase 2 — los clústeres pueden
-> cambiar ligeramente al reducirse la imputación artificial.**
-
 ## 3. Reducción de dimensionalidad
 
 - **Algoritmo:** UMAP.
