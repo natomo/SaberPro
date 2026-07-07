@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Si utiliza este software, por favor cite el artículo asociado (ver campo preferred-citation). Esta entrada se actualizará con el DOI y los datos completos de publicación una vez el artículo sea aceptado."
+title: "Clustering no supervisado de estudiantes Saber Pro en Colombia mediante UMAP y algoritmos de agrupamiento"
+type: software
+authors:
+  - family-names: "Orozco Morales"
+    given-names: "Nathalia"
+    affiliation: "Corporación Universitaria Minuto de Dios (UNIMINUTO), Grupo de Investigación INTI"
+  - family-names: "Valderrama García"
+    given-names: "Leonardo"
+  - family-names: "Jiménez"
+    given-names: "Marisol"
+  - family-names: "Rincón-Guio"
+    given-names: "Cristian"
+repository-code: "https://github.com/natomo/SaberPro"
+license: MIT
+version: "0.1.0"
+date-released: "2026-07-07"
+preferred-citation:
+  type: article
+  title: "TÍTULO DEL ARTÍCULO (pendiente de confirmar en versión final)"
+  authors:
+    - family-names: "Orozco Morales"
+      given-names: "Nathalia"
+    - family-names: "Valderrama García"
+      given-names: "Leonardo"
+    - family-names: "Jiménez"
+      given-names: "Marisol"
+    - family-names: "Rincón-Guio"
+      given-names: "Cristian"
+  journal: "PENDIENTE (ej. Journal of Educational Computing Research)"
+  year: 2026
+  status: "in-preparation"

@@ -1,0 +1,53 @@
+# Configuración del pipeline de clustering Saber Pro
+# Refleja los valores usados para los resultados reportados en el artículo.
+# Si cambias BEST_ALGO/BEST_K tras una nueva búsqueda de Fase 1, actualiza
+# también CITATION.cff / docs/methodology.md para mantener todo coherente.
+
+random_state: 42
+
+data:
+  # En Colab: '/content/drive/MyDrive/Proyecto/df_maestra.csv'
+  # En local: ajusta a donde tengas el CSV/parquet (ver data/README.md)
+  input_path: "data/raw/df_maestra.csv"
+  save_path: "data/processed/modelos/"
+  col_geo: "ESTU_COD_DEPTO_PRESENTACION"
+
+fase1:
+  sample_n: 200000
+  dims_umap: [2, 3, 4, 5]
+  ks: [2, 3, 4, 5, 6, 7, 8]
+  dbscan:
+    n_dim: 2
+    min_samples_vals: [5, 10, 20]
+  hdbscan:
+    min_cluster_vals: [5, 10, 15]
+    min_samples_vals: [5, 10]
+  output_csv: "reports/resultados_fase1.csv"
+
+fase2:
+  # ── Configuración final — elegida a partir del TOP de Fase 1 ──
+  best_algo: "KMeans"
+  best_k: 8
+  best_ndim: 2
+  # Parámetros alternativos (solo se usan si best_algo cambia)
+  dbscan_eps: 0.5
+  dbscan_min_samples: 10
+  hdbscan_min_cluster_size: 10
+  hdbscan_min_samples: 5
+
+dimensionality_reduction:
+  umap:
+    n_neighbors: 10
+    min_dist: 0.1
+    metric: "euclidean"
+    low_memory: true
+    # Si n > 100_000, reducir_umap ajusta sobre una submuestra de 80k
+    # y transforma el resto (ver dimensionality.py)
+
+evaluation:
+  ablation_study: true
+  validar_representatividad: true
+
+output:
+  figures_dir: "reports/figures"
+  results_dir: "reports"
