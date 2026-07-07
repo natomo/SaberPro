@@ -16,11 +16,11 @@ MAPA_BANO = {
     "1": 1, "2": 2, "3 o 4": 3, "5 o 6": 5, "MAS DE 6": 6, "NINGUNA": 0,
 }
 MAPA_ESTRATO = {
-    "Sin estrato": 0, "Estrato 1": 1, "Estrato 2": 2,
+    "Sin estrato": 0, "Sin Estrato": 0, "Estrato 1": 1, "Estrato 2": 2,
     "Estrato 3": 3, "Estrato 4": 4, "Estrato 5": 5, "Estrato 6": 6,
 }
 MAPA_VALORMATRICULA = {
-    "Sin costo": 0,
+    "Sin costo": 0, "No pagó matrícula": 0,
     "Menos de 500 mil": 1,
     "Entre 500 mil y menos de 1 millón": 2,
     "Entre 1 millón y menos de 2.5 millones": 3,
@@ -36,7 +36,10 @@ MAPA_EDUC = {
     "Técnica o tecnológica incompleta": 5,
     "Técnica o tecnológica completa": 6,
     "Educación profesional incompleta": 7,
-    "EDUCACIÓN PROFESIONAL COMPLETA": 8, "POSTGRADO": 9,
+    "EDUCACIÓN PROFESIONAL COMPLETA": 8, "Educación profesional completa": 8,
+    "POSTGRADO": 9, "Postgrado": 9,
+    # "No sabe" / "No Aplica" quedan sin mapear (NaN) — se imputan con la
+    # mediana más adelante, igual que cualquier otro valor faltante genuino.
 }
 MAPEO_HORAS = {
     "0": 0, "Menos de 10 horas": 1, "Entre 11 y 20 horas": 2,

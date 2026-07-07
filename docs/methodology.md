@@ -15,6 +15,25 @@
 2. Codificación de variables categóricas (nivel educativo de los padres, estrato, IES, programa académico).
 3. Escalamiento de variables numéricas previo a UMAP (estandarización).
 
+> **Nota de calidad de datos (corregida al incorporar `df_maestra.parquet`):**
+> los mapeos ordinales originales no cubrían todas las variantes de texto
+> presentes en los datos abiertos del ICFES:
+> - `FAMI_EDUCACIONPADRE` / `FAMI_EDUCACIONMADRE`: faltaban `'Educación
+>   profesional completa'` y `'Postgrado'` (el diccionario original solo
+>   tenía las versiones en mayúsculas). Esto generaba ~23% de NaN en
+>   educación del padre y ~21% en la madre, imputados silenciosamente con
+>   la mediana.
+> - `FAMI_ESTRATOVIVIENDA`: faltaba `'Sin Estrato'` (con E mayúscula).
+> - `ESTU_VALORMATRICULAUNIVERSIDAD`: faltaba `'No pagó matrícula'`
+>   (equivalente a `'Sin costo'`), ~9% de los registros.
+>
+> Tras corregir `preprocessing.py`, el NaN residual de educación del padre
+> baja a ~4.8% (que corresponde genuinamente a respuestas "No sabe" /
+> "No Aplica", no a un error de mapeo) y el resto queda por debajo de 1.5%.
+> **Si ya tenías resultados/figuras generados antes de esta corrección,
+> recomendamos volver a correr Fase 1 y Fase 2 — los clústeres pueden
+> cambiar ligeramente al reducirse la imputación artificial.**
+
 ## 3. Reducción de dimensionalidad
 
 - **Algoritmo:** UMAP.

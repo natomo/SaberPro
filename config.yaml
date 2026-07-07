@@ -6,9 +6,8 @@
 random_state: 42
 
 data:
-  # En Colab: '/content/drive/MyDrive/Proyecto/df_maestra.csv'
-  # En local: ajusta a donde tengas el CSV/parquet (ver data/README.md)
-  input_path: "data/raw/df_maestra.csv"
+  # Dataset incluido en el repo (data/raw/df_maestra.parquet) — datos abiertos ICFES
+  input_path: "data/raw/df_maestra.parquet"
   save_path: "data/processed/modelos/"
   col_geo: "ESTU_COD_DEPTO_PRESENTACION"
 

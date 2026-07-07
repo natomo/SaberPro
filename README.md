@@ -54,7 +54,7 @@ saberpro-clustering/
 
 ## Disponibilidad de los datos
 
-Los microdatos de Saber Pro utilizados en este estudio provienen del **ICFES** y están sujetos a sus términos de uso y a la normatividad colombiana de protección de datos personales (Ley 1581 de 2012). **Este repositorio no distribuye los microdatos originales ni los datos procesados.** Ver [`data/README.md`](data/README.md) para instrucciones sobre cómo solicitar acceso a los datos oficiales y reproducir el pipeline con datos propios o sintéticos.
+Los microdatos de Saber Pro utilizados en este estudio son **datos abiertos** publicados por el **ICFES** a través del portal de datos abiertos del Estado colombiano (https://www.datos.gov.co). Por ser de acceso público, **`data/raw/df_maestra.parquet` se incluye directamente en este repositorio** (452,020 registros, formato Parquet para respetar el límite de 100 MB por archivo de GitHub) para garantizar la reproducibilidad completa del análisis. Ver [`data/README.md`](data/README.md) para más detalle sobre el origen y las columnas.
 
 ## Instalación
 
