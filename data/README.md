@@ -21,11 +21,3 @@ Es el dataset consolidado que resulta de descargar los resultados de Saber Pro d
 
 Ver `docs/methodology.md` para el detalle de las columnas y mapeos ordinales aplicados en `preprocessing.py`.
 
-## Datos sintéticos para pruebas rápidas
-
-Si prefieres no descargar/usar el archivo completo mientras desarrollas, puedes generar una versión sintética con la misma estructura:
-
-```bash
-python scripts/generate_synthetic_data.py --n 2000 --output data/raw/synthetic_sample.csv
-```
-
