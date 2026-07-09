@@ -103,7 +103,3 @@ También puedes explorar el análisis paso a paso en `notebooks/`.
 - Las métricas de validación de clústeres (silhouette score, índice de Davies-Bouldin, índice de Calinski-Harabasz) se calculan automáticamente y se guardan en `reports/`.
 
 El código de este repositorio se distribuye bajo licencia MIT (ver [`LICENSE`](LICENSE)). Esta licencia **no aplica** a los datos de Saber Pro, cuyos derechos pertenecen al ICFES.
-
-## Contacto
-
-Nathalia Orozco Morales — Grupo de Investigación INTI, UNIMINUTO Pereira
