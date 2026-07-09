@@ -102,12 +102,6 @@ También puedes explorar el análisis paso a paso en `notebooks/`.
 - Las versiones exactas de las librerías están congeladas en `requirements.txt`.
 - Las métricas de validación de clústeres (silhouette score, índice de Davies-Bouldin, índice de Calinski-Harabasz) se calculan automáticamente y se guardan en `reports/`.
 
-## Citación
-
-Si utilizas este repositorio, por favor cita el artículo (ver [`CITATION.cff`](CITATION.cff), que se actualizará con los datos definitivos de publicación).
-
-## Licencia
-
 El código de este repositorio se distribuye bajo licencia MIT (ver [`LICENSE`](LICENSE)). Esta licencia **no aplica** a los datos de Saber Pro, cuyos derechos pertenecen al ICFES.
 
 ## Contacto
