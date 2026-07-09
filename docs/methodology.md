@@ -1,8 +1,5 @@
 # Metodología detallada
 
-> Documento complementario al artículo. Amplía las decisiones metodológicas
-> que por restricciones de espacio no caben en el manuscrito.
-
 ## 1. Datos
 
 - **Fuente:** Microdatos oficiales de la prueba Saber Pro (ICFES), año(s) 2021-2 a 2023-1.
